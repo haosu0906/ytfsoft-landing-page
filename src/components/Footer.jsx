@@ -2,15 +2,15 @@ import logoImg from '../assets/logo.png';
 
 const Footer = () =>{
     return (
-        <footer className="bg-slate-900 text-slate-300 py-12 mt-auto border-t border-slate-800">
+        <footer className="bg-white text-slate-900 py-12 mt-auto border-t border-slate-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 text-sm">
                   <div className="col-span-1 md:col-span-2 space-y-3"> 
                      <div className="flex items-center gap-2 mb-3">
                          <div className="flex-shrinl-0 flex items-center cursor-pointer">
-                              <img src={logoImg} alt="logo" className="h-12 w-auto" />
+                              <img src={logoImg} alt="logo" className="h-20 w-auto" />
                           </div>
-                        <span className="text-xl font-bold text-white">YTFSOFT CO., LTD</span>
+                     
                      </div>
 
                   </div>

@@ -1,5 +1,6 @@
 
 import './App.css'
+import AboutSection from './components/AboutSection'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import HeroBanner from './components/Herobanner'
@@ -15,6 +16,7 @@ function App() {
           <main className='flex-grow bg-slate-50'>
 
              <HeroBanner/>
+             <AboutSection/>
           </main>
 
       <Footer/>
