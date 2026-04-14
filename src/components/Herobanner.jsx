@@ -3,34 +3,33 @@ const HeroBanner = () => {
        <section className="relative bg-slate-900 pt-20 pb-32 lg:pt-32 lg:pb-48 overflow-hidden">
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
-                    YTFSOFT: Công nghệ dẫn đầu: <br className="hidden md:block" />
-                    <span className="text-cyan-400">Giải pháp tối ưu</span>
+                    YTFSOFT: Leading Technology: <br className="hidden md:block" />
+                    <span className="text-cyan-400">Optimal Solutions</span>
                 </h1>
                 <p className="mt-4 max-w-2xl text-lg md:text-xl text-slate-300 mx-auto mb-10">
-                    Chúng tôi cung cấp các giải pháp phần mềm toàn diện, chuyển đổi số doanh nghiệp,
-                    và xây dựng hệ thống website/app vững chắc cho tương lai.
+                    We provide comprehensive software solutions, enterprise digital transformation, and build robust digital ecosystems for the future.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
                     <button className="w-full sm:w-auto bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-lg shadow-cyan-500/30">
-                        Liên hệ ngay
+                       Contact Us Now
                     </button>
                     <button className="w-full sm:w-auto bg-transparent border-2 border-slate-500 hover:border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300">
-                        Khám phá thêm
+                        Discover More
                     </button>
                 </div>
 
                 <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto border-t border-slate-700 pt-8">
                     <div>
                         <p className="text-3xl md:text-4xl font-bold text-white">200+</p>
-                        <p className="text-sm text-slate-400 mt-1">Dự án hoàn thành</p>
+                        <p className="text-sm text-slate-400 mt-1">Completed Projects</p>
                     </div>
                     <div>
                         <p className="text-3xl md:text-4xl font-bold text-white">50+</p>
-                        <p className="text-sm text-slate-400 mt-1">Chuyên gia</p>
+                        <p className="text-sm text-slate-400 mt-1">Tech Experts</p>
                     </div>
                     <div>
                         <p className="text-3xl md:text-4xl font-bold text-white">99%</p>
-                        <p className="text-sm text-slate-400 mt-1">Khách hàng hài lòng</p>
+                        <p className="text-sm text-slate-400 mt-1">Client Satisfaction</p>
                     </div>
                 </div>
             </div>

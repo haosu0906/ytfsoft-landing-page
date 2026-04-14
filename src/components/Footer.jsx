@@ -16,16 +16,16 @@ const Footer = () =>{
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-white font-semibold text-base mb-3 border-l-2 border-cyan-500 pl-2">liên hệ</h4>
+                    <h4 className="text-white font-semibold text-base mb-3 border-l-2 border-cyan-500 pl-2">Contact</h4>
                     <p><strong>Email:</strong> info@ytfsoft.com</p>
                     <p><strong>Hotline:</strong> 0987.654.321</p>
                   </div>
 
                   <div className="space-y-3">
-                        <h4 className="text-white font-semibold text-base mb-3 border-l-2 border-cyan-500 pl-2">Về chúng tôi</h4>
-                        <a href="#" className="block hover:text-cyan-400 transition">Dịch vụ</a>
-                        <a href="#" className="block hover:text-cyan-400 transition">Chính sách</a>
-                        <a href="#" className="block hover:text-cyan-400 transition">Tin tức</a>
+                        <h4 className="text-white font-semibold text-base mb-3 border-l-2 border-cyan-500 pl-2">About us</h4>
+                        <a href="#" className="block hover:text-cyan-400 transition">Services</a>
+                        <a href="#" className="block hover:text-cyan-400 transition">Policy</a>
+                        <a href="#" className="block hover:text-cyan-400 transition">News</a>
                   </div>
 
                 </div>

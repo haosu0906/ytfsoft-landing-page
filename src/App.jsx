@@ -4,6 +4,7 @@ import AboutSection from './components/AboutSection'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import HeroBanner from './components/Herobanner'
+import ServicesPolicySection from './components/ServicesPolicySection'
 
 
 
@@ -17,6 +18,7 @@ function App() {
 
              <HeroBanner/>
              <AboutSection/>
+             <ServicesPolicySection/>
           </main>
 
       <Footer/>
