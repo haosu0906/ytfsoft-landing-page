@@ -17,8 +17,8 @@ const Footer = () =>{
 
                   <div className="space-y-3">
                     <h4 className="text-white font-semibold text-base mb-3 border-l-2 border-cyan-500 pl-2">Contact</h4>
-                    <p><strong>Email:</strong> info@ytfsoft.com</p>
-                    <p><strong>Hotline:</strong> 0987.654.321</p>
+                    <p>Copywright 2023 ytfsoft.com</p>
+                   
                   </div>
 
                   <div className="space-y-3">
@@ -30,7 +30,7 @@ const Footer = () =>{
 
                 </div>
                 <div className="border-t border-slate-800 pt-8 mt-8 text-xs text-slate-500 flex flex-col md:flex-row justify-between gap-4 items-center">
-                      <p>Copywright 2023 ytfsoft.com</p>
+                      
                       <div className="flex space-x-6">
                         <a href="#" className="hover:text-white transition duration-300">Facebook</a>
                         <a href="#" className="hover:text-white transition duration-300">LinkedIn</a>

@@ -4,7 +4,7 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
  
-        <div className="text-center mb-16">
+        <div data-aos="fade-up" className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-cyan-50 text-cyan-600 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
             GET IN TOUCH
           </span>
@@ -21,7 +21,7 @@ const ContactSection = () => {
         <div className="bg-slate-50 rounded-3xl overflow-hidden shadow-lg border border-slate-100 flex flex-col lg:flex-row">
           
           
-          <div className="w-full lg:w-2/5 bg-slate-900 p-10 lg:p-12 text-white relative overflow-hidden">
+          <div data-aos="fade-right" className="w-full lg:w-2/5 bg-slate-900 p-10 lg:p-12 text-white relative overflow-hidden">
             <div className="relative z-10">
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <p className="text-slate-300 mb-10 text-sm leading-relaxed">
@@ -67,7 +67,7 @@ const ContactSection = () => {
           </div>
 
          
-          <div className="w-full lg:w-3/5 p-10 lg:p-12 bg-white">
+          <div data-aos="fade-left" className="w-full lg:w-3/5 p-10 lg:p-12 bg-white">
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>

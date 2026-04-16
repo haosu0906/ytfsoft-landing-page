@@ -7,7 +7,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
      
-        <div className="text-center mb-16">
+        <div data-aos="fade-up" className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-cyan-50 text-cyan-500 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
             About Us
           </span>
@@ -31,7 +31,7 @@ const AboutSection = () => {
                 className="w-full h-auto object-cover rounded-xl shadow-md border border-gray-200"
               />
            
-              <div className="absolute bottom-4 left-4 bg-slate-900 text-white p-4 lg:p-5 rounded-xl shadow-lg border-l-4 border-cyan-500 w-40">
+              <div data-aos="fade-right" className="absolute bottom-4 left-4 bg-slate-900 text-white p-4 lg:p-5 rounded-xl shadow-lg border-l-4 border-cyan-500 w-40">
                 <p className="text-2xl font-bold text-cyan-400">200+</p>
                 <p className="text-xs text-slate-300 mt-1">Successful Projects</p>
               </div>
@@ -50,7 +50,7 @@ const AboutSection = () => {
           </div>
 
           
-          <div className="w-full space-y-6">
+          <div data-aos="fade-left" className="w-full space-y-6">
             <h3 className="text-2xl font-extrabold text-slate-900 mb-6 uppercase">
               Vision & Mission
             </h3>

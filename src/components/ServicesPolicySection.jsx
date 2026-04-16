@@ -142,7 +142,7 @@ const ServicesPolicySection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
    
-        <div className="text-center mb-16">
+        <div data-aos="fade-up" className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-cyan-50 text-cyan-600 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
             TECHNOLOGY SOLUTIONS
           </span>
@@ -197,7 +197,7 @@ const ServicesPolicySection = () => {
         </div>
 
         
-        <div className="text-center mb-16">
+        <div data-aos="fade-up" className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-cyan-50 text-cyan-600 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
             PRIVACY PROTECTION
           </span>
@@ -210,7 +210,7 @@ const ServicesPolicySection = () => {
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-inner border border-gray-100 max-w-5xl mx-auto">
+        <div data-aos="fade-up" className="bg-white rounded-3xl p-8 md:p-12 shadow-inner border border-gray-100 max-w-5xl mx-auto">
           <div className="space-y-4">
             {policies.map((policy, index) => {
               const isOpen = openIndex === index;

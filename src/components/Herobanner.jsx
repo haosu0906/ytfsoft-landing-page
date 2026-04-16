@@ -2,14 +2,14 @@ const HeroBanner = () => {
     return (
        <section className="relative bg-slate-900 pt-20 pb-32 lg:pt-32 lg:pb-48 overflow-hidden">
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
+                <h1 data-aos="fade-down" className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
                     YTFSOFT: Leading Technology: <br className="hidden md:block" />
                     <span className="text-cyan-400">Optimal Solutions</span>
                 </h1>
-                <p className="mt-4 max-w-2xl text-lg md:text-xl text-slate-300 mx-auto mb-10">
+                <p data-aos="fade-up" data-aos-delay="200" className="mt-4 max-w-2xl text-lg md:text-xl text-slate-300 mx-auto mb-10">
                     We provide comprehensive software solutions, enterprise digital transformation, and build robust digital ecosystems for the future.
                 </p>
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
+                <div data-aos="zoom-in" data-aos-delay="400" className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
                     <button className="w-full sm:w-auto bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-lg shadow-cyan-500/30">
                        Contact Us Now
                     </button>
