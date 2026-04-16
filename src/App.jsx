@@ -9,6 +9,8 @@ import HeroBanner from './components/Herobanner'
 import ServicesPolicySection from './components/ServicesPolicySection'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import TimelineSection from './components/TimelineSection'
+import NewsSection from './components/NewsSection'
 
 
 
@@ -16,7 +18,7 @@ function App() {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      once: true,
+      once: false,
       offset: 100,
     })
   }, []);
@@ -31,6 +33,8 @@ function App() {
         <HeroBanner />
         <AboutSection />
         <ServicesPolicySection />
+        <TimelineSection/>
+        <NewsSection/>
         <ContactSection />
       </main>
 

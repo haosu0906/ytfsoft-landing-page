@@ -4,7 +4,7 @@ const Header = () => {
     const menuItem = [
         { name: 'Home', link: '#', active: true },
         { name: 'policy', link: '#', active: false },
-        { name: 'contact', link: '#', active: false },
+        { name: 'contact', link: '#contact', active: false },
 
     ];
 
