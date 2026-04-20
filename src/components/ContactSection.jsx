@@ -1,9 +1,40 @@
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+
 const ContactSection = () => {
+  const form = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    
+    emailjs.sendForm(
+      'service_p066z97',   
+      'template_fagyiq5', 
+      form.current, 
+      'feg6OovcWa26dRUrY'   
+    )
+    .then((result) => {
+        setIsSubmitting(false);
+        setSubmitStatus('success');
+        e.target.reset(); 
+       
+        setTimeout(() => setSubmitStatus(null), 5000);
+    }, (error) => {
+        setIsSubmitting(false);
+        setSubmitStatus('error');
+        console.log('Lỗi gửi mail:', error.text);
+    });
+  };
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
- 
+        
         <div data-aos="fade-up" className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-cyan-50 text-cyan-600 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
             GET IN TOUCH
@@ -35,7 +66,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Call Us</p>
-                    <p className="font-medium">+84 948 308 000</p>
+                    <p className="font-medium">+84 987 654 321</p>
                   </div>
                 </div>
 
@@ -55,50 +86,75 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Location</p>
-                    <p className="font-medium leading-relaxed"> Gia Lam, Hanoi, Vietnam</p>
+                    <p className="font-medium leading-relaxed">3rd Floor, My Dinh Plaza Building, Hanoi, Vietnam</p>
                   </div>
                 </div>
               </div>
             </div>
             
-          
+            
             <div className="absolute bottom-[-10%] right-[-10%] w-64 h-64 bg-cyan-600 rounded-full opacity-20 blur-3xl"></div>
             <div className="absolute top-[10%] left-[-20%] w-48 h-48 bg-blue-500 rounded-full opacity-20 blur-2xl"></div>
           </div>
 
-         
+          
           <div data-aos="fade-left" className="w-full lg:w-3/5 p-10 lg:p-12 bg-white">
-            <form className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-semibold text-slate-700 mb-2">First Name</label>
-                  <input type="text" id="firstName" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors bg-slate-50 focus:bg-white" placeholder="your name" />
+                  <label htmlFor="user_firstName" className="block text-sm font-semibold text-slate-700 mb-2">First Name</label>
+                  <input type="text" id="user_firstName" name="user_firstName" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors bg-slate-50 focus:bg-white" placeholder="John" />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-semibold text-slate-700 mb-2">Last Name</label>
-                  <input type="text" id="lastName" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors bg-slate-50 focus:bg-white" placeholder="your name" />
+                  <label htmlFor="user_lastName" className="block text-sm font-semibold text-slate-700 mb-2">Last Name</label>
+                  <input type="text" id="user_lastName" name="user_lastName" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors bg-slate-50 focus:bg-white" placeholder="Doe" />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
-                  <input type="email" id="email" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors bg-slate-50 focus:bg-white" placeholder="you@example.com" />
+                  <label htmlFor="user_email" className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
+                  <input type="email" id="user_email" name="user_email" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors bg-slate-50 focus:bg-white" placeholder="john@company.com" />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
-                  <input type="tel" id="phone" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors bg-slate-50 focus:bg-white" placeholder="your phone" />
+                  <label htmlFor="user_phone" className="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
+                  <input type="tel" id="user_phone" name="user_phone" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors bg-slate-50 focus:bg-white" placeholder="+84 123 456 789" />
                 </div>
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
-                <textarea id="message" rows="4" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors bg-slate-50 focus:bg-white resize-none" placeholder="How can we help you?"></textarea>
+                <textarea id="message" name="message" required rows="4" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors bg-slate-50 focus:bg-white resize-none" placeholder="How can we help you?"></textarea>
               </div>
 
+              
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-50 text-green-700 border border-green-200 rounded-lg text-sm">
+                  Message sent successfully! We will get back to you soon.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-50 text-red-700 border border-red-200 rounded-lg text-sm">
+                  Failed to send message. Please try again later.
+                </div>
+              )}
+
               <div className="pt-2">
-                <button type="button" className="w-full bg-slate-900 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-lg transition duration-300 shadow-md">
-                  Send Message
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className={`w-full font-bold py-4 px-8 rounded-lg transition duration-300 shadow-md flex justify-center items-center gap-2 
+                    ${isSubmitting ? 'bg-slate-400 cursor-not-allowed' : 'bg-slate-900 hover:bg-cyan-600 text-white'}`}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending...
+                    </>
+                  ) : 'Send Message'}
                 </button>
               </div>
             </form>
