@@ -1,17 +1,11 @@
 
 import { useEffect } from 'react'
 import './App.css'
-import AboutSection from './components/AboutSection'
-import ContactSection from './components/ContactSection'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import HeroBanner from './components/Herobanner'
-import ServicesPolicySection from './components/ServicesPolicySection'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import TimelineSection from './components/TimelineSection'
-import NewsSection from './components/NewsSection'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProductsPage from './pages/ProductsPage'
+import Home from './pages/Home';
 
 
 function App() {
@@ -25,22 +19,13 @@ function App() {
 
 
   return (
-    <div className='min-h-screen flex flex-col font-sans'>
-
-      <Header />
-      <main className='flex-grow bg-slate-50'>
-
-        <HeroBanner />
-        <AboutSection />
-        <ServicesPolicySection />
-        <TimelineSection/>
-        <NewsSection/>
-        <ContactSection />
-      </main>
-
-      <Footer />
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        
+        <Route path="/products" element={<ProductsPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
