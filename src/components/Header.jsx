@@ -47,6 +47,7 @@ const Header = () => {
                                     smooth
                                     key={item.name}
                                     to={item.link}
+                                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                                     className={`font-medium transition duration-300 px-1 py-1 uppercase ${
                                         isActive
                                             ? 'text-cyan-500 border-b-2 border-cyan-500' 
@@ -93,7 +94,12 @@ const Header = () => {
                                     key={item.name}
                                     to={item.link}
                                     
-                                    onClick={() => setIsMobileMenuOpen(false)} 
+                                    onClick={() => {
+                                        setIsMobileMenuOpen(false); 
+                                        if (item.link === '/') {
+                                            window.scrollTo({ top: 0, behavior: 'smooth' }); 
+                                        }
+                                    }}
                                     className={`block font-medium transition duration-300 px-3 py-3 uppercase rounded-md ${
                                         isActive
                                             ? 'bg-cyan-50 text-cyan-600' 
