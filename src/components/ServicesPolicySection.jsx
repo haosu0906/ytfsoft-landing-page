@@ -197,7 +197,7 @@ const ServicesPolicySection = () => {
         </div>
 
         
-        <div data-aos="fade-up" className="text-center mb-16">
+        <div id="policy" data-aos="fade-up" className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-cyan-50 text-cyan-600 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
             PRIVACY PROTECTION
           </span>
